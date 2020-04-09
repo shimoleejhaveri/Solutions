@@ -35,7 +35,7 @@ def checkCharacter(string: str) -> str:
         
         char = "#"
         i = 0
-        new_string=string
+        new_string = string
         
         while char in new_string: 
             if i == 0 and new_string[i] == char:
@@ -56,4 +56,5 @@ class Solution:
 
         if new_S == new_T:
             return True
+            
         return False

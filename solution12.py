@@ -28,4 +28,25 @@ every time we take a turn.
 
 class Solution:
     def lastStoneWeight(self, stones: List[int]) -> int:
+        for stone in range(len(stones)):
+            stones.sort()
+
+            if len(stones) == 0:
+                return 0
+
+            elif len(stones) == 1:
+                return stones[0]
+
+            else:
+                if stones[-2] == stones[-1]:
+                    y = stones.pop()
+                    x = stones.pop()
+                    z = (y - x)
+                    stones.append(z)
+                    
+                else:
+                    y = stones.pop()
+                    x = stones.pop()
+                    z = (y - x)
+                    stones.append(z)
 
